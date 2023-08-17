@@ -23,6 +23,11 @@ public class EmailController {
 	public String sendMail(@RequestBody EmailDetails details) {
 		boolean f = emailService.sendMail(details);
 		System.out.println(f);
-		return "Email Send Successfully";
+		System.out.println(details);
+		if (f)
+			return "Email Send Successfully";
+		else
+			return "Something Went Wrong";
+
 	}
 }
