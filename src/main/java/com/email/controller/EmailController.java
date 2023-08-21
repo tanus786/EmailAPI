@@ -17,7 +17,6 @@ import com.email.service.EmailService;
 public class EmailController {
 	@Autowired
 	private EmailService emailService;
-
 	@GetMapping("/hello")
 	public String hey() {
 		return "hello";
